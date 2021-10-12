@@ -84,8 +84,8 @@ function deleteDigit(e){
     console.log("operator is"+ operator);
     if(operator===""){
         if(num1!==""){
-            console.log("NUM1: "+num1);
-            num1 = Math.floor(num1/10);
+            console.log(typeof num1);
+            num1 = num1.toString().slice(0,-1);
             displayInput(num1);
         }
     }
