@@ -1,25 +1,31 @@
+
 .button-grid{
     display:grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(4,1fr);
-    grid-gap:10px;
+    grid-gap:14px;
     
 }
 .calc-frame{
     /*width:200px;*/
-    border:1px solid lime;
+    border:2px solid black;
     padding:25px 15px 15px 15px;
-    background-color:black;
+    background-color:#3b4b4a;
     border-radius: 20px;
+}
+.clear-delete{
+    display:flex;
+    justify-content: space-around;
 }
 .calc-display{
     border:1px solid white;
     text-align: right;
     padding:10px;
-    background-color: black;
+    background-color: white;
     border-radius: 5px;
-    color:lime;
+    color:black;
     height:60px;
+    font-weight:bold;
 }
 
 .calc-display .first-half{
@@ -37,6 +43,7 @@
 .clear-delete button{
     width:135px;
     padding:10px;
+    background-color:#66c430;
 }
 
 body{
@@ -44,14 +51,20 @@ body{
     justify-content: center;
     align-items: center;
     height:100vh;
-    background-color: black;
-    color:white;
+    background-color:#c4f1db;
+   font-family: 'Nunito', sans-serif;
+    
 }
 button{
     width:60px;
     height:60px;
-    color:lime;
-    background-color:black;
-    border-radius: 5px;
-    border:1px solid lime;
+    color:white;
+    background-color:#39794c;
+    border-radius: 10px;
+    font-size:20px;
+    font-weight:bold;
+}
+.operator button{
+    background-color:#87f1c2;
+    color:black;
 }
