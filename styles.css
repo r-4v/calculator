@@ -1,0 +1,53 @@
+.button-grid{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-gap:10px;
+    
+}
+.calc-frame{
+    /*width:200px;*/
+    border:1px solid lime;
+    padding:25px 15px 15px 15px;
+    background-color:black;
+    border-radius: 20px;
+}
+.calc-display{
+    border:1px solid white;
+    text-align: right;
+    padding:10px;
+    background-color: black;
+    border-radius: 5px;
+    color:lime;
+    height:60px;
+}
+
+.calc-buttons{
+    /*border:1px solid green;*/
+    margin-top:20px;
+}
+.clear-delete{
+    margin-bottom: 10px;
+    display:flex;
+}
+.clear-delete button{
+    width:135px;
+    padding:10px;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-color: black;
+    color:white;
+}
+button{
+    width:60px;
+    height:60px;
+    color:lime;
+    background-color:black;
+    border-radius: 5px;
+    border:1px solid lime;
+}
