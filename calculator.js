@@ -31,13 +31,13 @@ operatorButtonList.forEach((operatorButton) =>{
 
 function operandUpdate(e){
     if(operator === "")
-    { if(!(num1.includes("."))||e.target.innerText!=="."){
+    { if(!(num1.toString().includes("."))||e.target.innerText!=="."){
     num1 += e.target.innerText;
     console.log(num1);
     displayInput(num1);}
 }
     else{
-        if(!(num2.includes("."))||e.target.innerText!=="."){
+        if(!(num2.toString().includes("."))||e.target.innerText!=="."){
         num2 += e.target.innerText;
         console.log("number 2 is" + num2);
         console.log("number 1 is "+num1);

@@ -22,6 +22,10 @@
     height:60px;
 }
 
+.calc-display .first-half{
+    font-size: 25px;
+}
+
 .calc-buttons{
     /*border:1px solid green;*/
     margin-top:20px;
