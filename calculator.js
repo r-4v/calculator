@@ -63,6 +63,9 @@ function operatorUpdate(e){
     {operator = e.target.innerText;
     console.log(operator);
     displayInput(operator);}
+    else{
+        operator = "";
+    }
     }
 }
 function clearData(e){
@@ -74,9 +77,19 @@ function clearData(e){
     operator="";
 }
 function deleteDigit(e){
-    let input = e.target.innerText;
-    console.log(input);
-    displayInput(input);
+    if(num2!==""){
+        num2 = num2.slice(0,-1);
+        displaySecondOperand(num2);
+    }
+    console.log("operator is"+ operator);
+    if(operator===""){
+        if(num1!==""){
+            console.log("NUM1: "+num1);
+            num1 = Math.floor(num1/10);
+            displayInput(num1);
+        }
+    }
+   
 }
 
 
