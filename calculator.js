@@ -9,8 +9,11 @@ let num1 = "";
 let num2 = "";
 let operator = "";
 let operators = ['+', '-','x','/'];
+startCalculator();
+function startCalculator(){
+    addListeners();
+}
 
-addListeners();
 
 // add event listeners to all buttons
 function addListeners(){
@@ -42,6 +45,10 @@ function operandUpdate(e){
     }}
 }
 function operatorUpdate(e){
+    if(num1===""){
+        operator = "";
+    }
+    else{
     if(num1 != "" && num2 != ""){
         num1 = operate(operator,num1,num2)
         if(countDecimals(num1) >= 2){
@@ -56,15 +63,15 @@ function operatorUpdate(e){
     {operator = e.target.innerText;
     console.log(operator);
     displayInput(operator);}
-    
+    }
 }
 function clearData(e){
-    let input = "";
-    console.log(input);
-    displayInput(input);
-    displaySecondOperand(input);
+    startCalculator();
+    displayInput("");
+    displaySecondOperand("");
     num1 = "";
     num2 = "";
+    operator="";
 }
 function deleteDigit(e){
     let input = e.target.innerText;
@@ -90,51 +97,6 @@ function displayInput(input){
 function displaySecondOperand(input){
     displaySecondHalf.innerText= input;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
