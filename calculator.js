@@ -39,25 +39,32 @@ function operandUpdate(e){
     else{
         if(!(num2.toString().includes("."))||e.target.innerText!=="."){
         num2 += e.target.innerText;
-        console.log("number 2 is" + num2);
+        //console.log("Number 2is" + num2);
         console.log("number 1 is "+num1);
         displaySecondOperand(num2);
     }}
 }
 function operatorUpdate(e){
+    
+        console.log("number 2 here is" + num2);
     if(num1===""){
         operator = "";
+        
     }
     else{
-    if(num1 != "" && num2 != ""){
+        //console.log("Number 1 here is "+num1);
+       
+    if(num1 !== "" && num2 !== ""){
+        
         num1 = operate(operator,num1,num2)
+        console.log("num1 after is:"+num1)
         if(countDecimals(num1) >= 2){
             num1 = num1.toFixed(2);
         }
         displayInput(num1);
         num2 = "";
         displaySecondOperand(num2);
-        console.log("num1 ="+num1);
+        /*console.log("num1 ="+num1);*/
     }
     if(e.target.innerText !== "=" )
     {operator = e.target.innerText;
@@ -125,6 +132,7 @@ function subtract(num1,num2){
 }
 function multiply(num1,num2){
     num1 = (+num1)*(+num2);
+    
     return num1;
 }
 function divide(num1,num2){
@@ -132,6 +140,7 @@ function divide(num1,num2){
     return num1;
 }
 function operate(operator , num1,num2){
+    console.log("operating");
     switch(operator){
         case "+":   return add(num1,num2);
                     
